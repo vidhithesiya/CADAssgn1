@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <!-- <script src="cordova.js"></script> -->
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter" ng-controller="myCtrl">
+
+    <ion-pane>
+      <ion-header-bar class="bar-stable">
+        <h1 class="title">Ionic Blank Starter</h1>
+      </ion-header-bar>
+      <ion-content>
+        <div ng-show="page == 'navigation'" >
+            <h1 style="text-align:center; font-family:cursive; color:rgb(41, 46, 142); ">Renting Properties near Conestoga College</h1>
+            <h3>Click on below to rent the apartment near Conestoga College!</h2>
+                <div class="list">
+                    <a class="link" href="" ng-click="gotoPage('page1')">Old Carriage</a>
+                </div>
+                <br/>
+                <div class="list">
+                    <a class="link" href="" ng-click="gotoPage('page2')">CollegeView Commons</a>
+                </div>
+                <br/>
+                <div class="list">
+                    <a class="link" href="" ng-click="gotoPage('page3')">Vanier Drive</a>
+                </div>
+                
+                </br>
+                
+        
+                <p></p>
+                <footer>&copy; 2018</footer>
+        </div>
+        <div ng-show="page == 'page1'">
+            <i class="icon ion-arrow-left-a"	ng-click="gotoPage('navigation')" ></i>
+            <h1 style="text-align:center; ">Old Carriage</h1>
+    
+            <p></p>
+            <img src="img/1.jpg" width="100%!important" height="100vh"/>
+            <div id="Description">Located in Pioneer Park, you’ll be close to schools, golf courses and shopping. Your new home features large living spaces, and bright windows throughout!. Plus, stunning landscaped grounds are a treat to come home to every day!
+                <br>New Glass Balconies
+                <br>Nearby Public Transit
+                <br>FOB Access & Common Area Security Camera Monitoring
+                <br>Pet Friendly Community<p></p>
+        <b>Your Neighbourhood</b><br>
+                Find some of the easiest access to the 401 in all of Kitchener, with Homer Watson allowing access to the expressway as well. Convenience doesn't begin to explain the amenities available to you in this neighbourhood. The college is only a stone throw away along with dining, transit, entertainment and shopping. Your children will love all the parks, the Kitchener Public Library and Museum that's close by. Find trails for hiking, biking and dog walking around every corner. Look no further, you're home in Pioneer Park.
+        <br>Conestoga College
+        <br>Fairview Park Mall
+        <br>Pioneer Park Plaza
+        <br>Easy Access to Highway 401
+            </div>
+            <p></p>
+        
+            
+            <p/>
+            <div id="googleMap" style="width:100%;height:400px;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2899.313819142314!2d-80.43321728479256!3d43.39136977734046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b8a9f064e4127%3A0x71e7f30df59766c2!2sOld+Carriage+Dr%2C+Kitchener%2C+ON!5e0!3m2!1sen!2sca!4v1524594460984" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+            <p></p>
+            </div>
+        </div>
+        <div ng-show="page == 'page2'">
+                <i class="icon ion-arrow-left-a"	ng-click="gotoPage('navigation')" ></i>
+            <h1 style="text-align:center; ">College View Commons</h1>
+    
+            <p></p>
+            <img src="img/2.jpg" width="100%!important" height="100vh"/>
+            <div id="Description">Your college experience at Collegeview Commons should be exceptional. The cost of your college apartment shouldn’t be. That’s why Collegeview Commons’ fully furnished, modern living spaces feature enhanced-privacy for comfort and study, amenities promoting health, fitness, and socialization, and professional on-site management — all at a price that will make you say, “Ahhhh.” 
+        <br>
+                And, we make sure you have the resources you need to succeed. Our 24-hour Business Centre; private & group study lounges and Wi-Fi hotspots help you stay connected to your studies — not to mention your friends and family.
+            </div>
+            <p></p>
+        
+            
+            <p/>
+            <div id="googleMap" style="width:100%;height:400px;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2899.295884514271!2d-80.4307756848365!3d43.391744679131065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b8a9e1535140d%3A0xc96895921e88bb1c!2sCollegeview+Commons!5e0!3m2!1sen!2sca!4v1524595025364" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <p></p>
+            </div>
+          </div>
+          <div ng-show="page == 'page3'">
+                <i class="icon ion-arrow-left-a"	ng-click="gotoPage('navigation')" ></i>
+              <h1 style="text-align:center; ">Vanier Drive</h1>
+    
+              <p></p>
+              <img src="img/3.jpg" width="100%!important" height="100vh"/>
+              <div id="Description"><b>Apartment / Condo / Strata Rentals at 49 Vanier Drive, Kitchener, ON, N2C 2H8</b><br></b>Metcap's 49 Vanier Drive in Kitchener offers residents a variety of newly renovated rental options and suite layouts. The over-size 1, 2 and 2 bedroom plus den suites are beautifully renovated with hardwood floors and stainless steel appliances as well as central AC, balcony and watertank. With beautifully renovated lobby, laundry and common areas as well as outdoor and underground secured parking 49 Vanier is a great building to call home.The building is accross the street from area schools, grocery stores, parks and close to Fairview Walk in clinic and offers easy access to the expressway and Hwy 401. Transit access is conveniently located close by as well. Call us to book a tour!  </div>
+              <p></p>
+          
+              
+              <p/>
+              <div id="googleMap" style="width:100%;height:400px;">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2897.677959787179!2d-80.46308618483525!3d43.42555477912979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf52ea91628e1%3A0x1c6f03ca4cf02144!2sVanier+Dr%2C+Kitchener%2C+ON!5e0!3m2!1sen!2sca!4v1524595216535" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                  <p></p>
+                </div>
+            </div>
+
+
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>

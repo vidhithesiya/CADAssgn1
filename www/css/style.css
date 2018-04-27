@@ -1,0 +1,20 @@
+/* Empty. Add your own CSS if you like */
+* {
+    text-align: center;
+    font-size: 24px;
+    padding: 12px;
+    background: blue!important;
+    color: white;
+    
+}
+
+.list {
+    background:black!important;
+    box-shadow: 0px 0px 10px rgb(41, 46, 142);
+}
+
+.link {
+    background: black!important;
+    text-decoration: none;
+
+}
